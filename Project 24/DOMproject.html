@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2 {
+            font-family: sans-serif;
+            position: relative;
+        }
+
+        #Answer {
+            border: 2px solid black;
+            width: 50%;
+            height: 100px;
+        }
+
+        button {
+            width: 100px;
+            height: 75px;
+            border-radius: 25px;
+            font-size: 25px;
+            padding: 2px;
+            font-family: sans-serif;
+            background-color: aquamarine;
+            box-shadow: 9px 0px 9px rgb(0, 255, 170);
+            border: 2px solid rgb(25, 88, 88);
+        }
+
+        button:hover {
+            animation-name: Magic;
+            animation-duration: 1.5s;
+            cursor: pointer;
+        }
+
+        @keyframes Magic {
+            0% {
+                background-color: orangered;
+                color: white;
+
+            }
+
+            25% {
+                background-color: rgb(0, 255, 255);
+                color: white;
+            }
+
+            50% {
+                scale: 1;
+                background-color: rgb(53, 214, 160);
+                color: whitesmoke;
+
+            }
+
+            75% {
+                transform: rotate(360deg);
+                background-color: aquamarine;
+                scale: 2;
+            }
+
+            100% {
+                background-color: aqua;
+                box-shadow: none;
+            }
+        }
+
+        fieldset {
+            border-radius: 25px;
+            border: 8px solid orange;
+        }
+
+        div {
+            border-radius: 25px;
+            background-color: black;
+            color: aqua;
+            text-shadow: 0px 0px 9px aqua, 0px 0px 9px aqua;
+            padding: 2px;
+            box-shadow: 0px 9px 9px rgb(0, 255, 115);
+        }
+
+        h1{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: brown;
+            color: white;
+        }
+
+        p{
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+
+        input {
+            border: 2px solid black;
+            border-radius: 25px;
+            padding: 2px;
+            box-shadow: 0px 2px 3px ;
+        }
+        hr{
+            border: 2px dashed black;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>
+            📖Homework Answers!📚
+        </h1>
+        <fieldset>
+            <p>Enter Number1: <input type="number" id="num1"><br>
+            <p>Enter Number2: <input type="number" id="num2"><br><br>
+                <button onclick="Add()">Add</button>
+                <button onclick="Subtract()">Subtract</button>
+                <button onclick="Multiply()">Multiply</button>
+                <button onclick="Divide()">Divide</button>
+        </fieldset>
+        <hr>
+        <div id="Answer">
+            <h2 id="results">Your Answer Will Come :)</h2>
+            </fieldset>
+    </center>
+    <script>
+        function Add(){
+            let num1 = parseInt(document.getElementById("num1").value)
+            let num2 = parseInt(document.getElementById("num2").value)
+
+            let sum = num1 + num2;
+            parseInt(document.getElementById("results").innerHTML = sum)
+        }
+        function Subtract() {
+            let num1 = parseInt(document.getElementById("num1").value)
+            let num2 = parseInt(document.getElementById("num2").value)
+
+            let sum = num1 - num2;
+            parseInt(document.getElementById("results").innerHTML = sum)
+        }
+        function Multiply() {
+            let num1 = parseInt(document.getElementById("num1").value)
+            let num2 = parseInt(document.getElementById("num2").value)
+
+            let sum = num1 * num2;
+            parseInt(document.getElementById("results").innerHTML = sum)
+        }
+        function Divide() {
+            let num1 = parseInt(document.getElementById("num1").value)
+            let num2 = parseInt(document.getElementById("num2").value)
+
+            let sum = num1 / num2;
+            parseInt(document.getElementById("results").innerHTML = sum)
+        }
+    </script>
+</body>
+
+</html>
