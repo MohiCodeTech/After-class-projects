@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
-    
+
 
 .lobster-regular {
     font-family: "Lobster", sans-serif;
@@ -24,7 +24,6 @@ body {
     justify-content: space-between;
     background-color: rgb(72, 166, 167);
     align-items: center;
-
     height: auto;
 
 }
@@ -55,7 +54,8 @@ a {
 .col-6 nav {
     justify-content: end;
 }
-img{
+
+img {
     width: 30%;
     height: 15%;
     float: left;
@@ -63,15 +63,90 @@ img{
     border-radius: 25px;
     box-shadow: 0px 9px 9px gray;
 }
-p{
+
+p {
     font-size: 30px;
-    font-weight: lighter ;
+    font-weight: lighter;
 }
-#HATE{
+
+#HATE {
     float: right
 }
-section{
+
+section {
     border: 2px solid;
     border-radius: 25px;
     box-shadow: 9px 9px 9px gray;
+}
+
+#card-btn:hover {
+    animation-duration: 1s;
+    animation-name: funbutton;
+}
+
+@keyframes funbutton {
+    0% {
+        background-color: rgb(0, 89, 255);
+        color: white;
+        box-shadow: 0px 0px 9px gray, 0px 0px 9px gray;
+    }
+
+    25% {
+        background-color: orange;
+        scale: 1;
+        color: black;
+    }
+
+    50% {
+        scale: 2;
+        background-color: rgb(0, 255, 149);
+        color: black;
+        outline: rgb(0, 132, 255);
+    }
+
+    75% {
+        background-color: rgb(0, 89, 255);
+        scale: 1.25;
+        outline: rgb(0, 132, 255);
+    }
+
+    100% {
+        background-color: rgb(0, 140, 255);
+        transform: scale(1.5);
+        outline: rgb(0, 132, 255);
+        box-shadow: 0px 0px 9px gray, 0px 0px 9px gray;
+    }
+}
+
+#card-btn {
+    box-shadow: 3px 3px 4px black;
+}
+
+#cardsec:hover {
+    animation-duration: 0.75s;
+    animation-name: normal;
+
+}
+
+@keyframes normal {
+    0% {
+        scale: 1;
+
+    }
+
+    50% {
+        scale: 1.25;
+    }
+
+    100% {
+        scale: 1;
+        box-shadow: 2px 2px 9px gray;
+    }
+}
+
+#cardsec {
+    box-shadow: 2px 2px 9px gray;
+    margin-top: 7px;
+    padding: 5px;
+    margin-left: 4px;
 }
