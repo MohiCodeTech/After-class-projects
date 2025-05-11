@@ -31,6 +31,8 @@ body {
 #logo {
     height: 40px;
     width: 40px;
+    box-shadow: none;
+    border-radius: 0%;
 }
 
 #nav-1 {
@@ -149,4 +151,19 @@ section {
     margin-top: 7px;
     padding: 5px;
     margin-left: 4px;
+}
+
+#contact-card {
+    background-color: teal;
+}
+
+#contact-card:hover {
+    animation-duration: 1s;
+    animation-name: funbutton;
+}
+
+#i {
+    background-color: white;
+    border-radius: 25px;
+    padding: 3px;
 }
