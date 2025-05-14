@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Login page</title>
+    <link rel="stylesheet" href="bankstyle.css">
+    <style>
+        #homeButton {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <form id="simpleform">
+            <h1>Moheath Bank</h1>
+            <p>Enter Your name: </p><input id="username" type="text">
+            <br><br>
+            <p>Enter Your Password: </p><input id="password" type="password"> <br><br>
+            <p>Enter Your Email: </p><input id="email" type="email"> <br><br>
+            <button type="button" onclick="validateform()">Submit Login Details!</button>
+            <h2 id="errormessage"></h2>
+            <button type="button" id="homeButton"><a href="bankhome.html"
+                    style="text-decoration: none; color: inherit;">
+                    Go To Home page!
+                </a></button>
+        </form>
+    </center>
+    <script>
+        function validateform() {
+            const username = document.getElementById("username").value;
+            const Password = document.getElementById("password").value;
+            const email = document.getElementById("email").value;
+            const errormessage = document.getElementById("errormessage");
+            const homeButton = document.getElementById("homeButton");
+            homeButton.style.display = "none";
+
+            if (username === "") {
+                errormessage.textContent = "Username field is required";
+                errormessage.style.color = "red";
+            } else if (Password === "") {
+                errormessage.textContent = "Password field is required";
+                errormessage.style.color = "red";
+            } else if (email === "") {
+                errormessage.textContent = "Email field is required";
+                errormessage.style.color = "red";
+            } else if (Password.length < 6 || Password.length > 10) {
+                errormessage.textContent = "Password must be between 6 and 10 characters";
+                errormessage.style.color = "red";
+            }
+            else {
+                errormessage.textContent = "Login Details Submitted";
+                errormessage.style.color = "green";
+                homeButton.style.display = "inline-block";
+            }
+        }
+    </script>
+</body>
+
+</html>
