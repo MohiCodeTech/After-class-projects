@@ -1,9 +1,9 @@
-def fibonacci(n):
-    if n == 0:
-        return 1
-    else:
-        return n - fibonacci(n - 1) + fibonacci(n - 2)
+def fibonacci_for_loop(n):
+    """Generates the Fibonacci sequence up to n terms using a for loop."""
+    a, b = 0, 1
+    for _ in range(n):
+        print(a, end=" ")
+        a, b = b, a + b
 
-num = int(input('enter a number!: '))
-ans = fibonacci(5)
-print(f"The fibonacci of {num} is {ans}")
+# Example usage:
+fibonacci_for_loop(10)
