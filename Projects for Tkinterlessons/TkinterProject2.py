@@ -7,7 +7,7 @@ root.title("Rock, paper, scissors game with the computer")
 root.geometry("400x500")
 
 label1 = tk.Label(root, text="Rock, Paper, Scissors Shoot!", font=("Sans-serif", 19))
-label1.grid(pady=10)
+label1.pack(pady=10)
 
 comp_label = tk.Label(root, text="", font=("Arial", 13))
 comp_label.pack(pady=10)
@@ -15,10 +15,9 @@ comp_label.pack(pady=10)
 result_label = tk.Label(root, text="", font=("Sans", 14))
 result_label.pack(pady=10)
 
-choices = {"Rock", "Paper", "Scissors"}
 
 def play(user_choice):
-    comp_choice = random.choice(choices)
+    comp_choice = random.choice()
     comp_label.config(text=f"Computer chose: {comp_choice}")
     if user_choice == comp_choice:
         result = "Its a tie!"
@@ -30,5 +29,17 @@ def play(user_choice):
         print("You loose😥")
 
     result_label.config(text=result)
+
+btn_frame = tk.Frame(root)
+btn_frame.pack(pady=20)
+
+rock_btn = tk.Button(btn_frame, text="Rock", width=10, font=("Arial", 19), command=lambda: play("Rock"))
+rock_btn.grid(row=0, column=0, padx=10)
+
+paper_btn = tk.Button(btn_frame, text="Paper", width=10, font=("Arial", 19), command=lambda: play("Paper"))
+paper_btn.grid(row=0, column=1, padx=10)
+
+scissors_btn = tk.Button(btn_frame, text="Scissors", width=10, font=("Arial", 19), command=lambda: play("Scissors"))
+scissors_btn.grid(row=0, column=2, padx=10)
 
 root.mainloop()
